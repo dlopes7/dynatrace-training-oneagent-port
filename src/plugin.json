@@ -11,7 +11,18 @@
         "install_requires": [],
         "activation": "Singleton"
     },
-    "properties": [],
-    "metrics": []
+    "properties": [
+        {"key":  "targets", "type": "Textarea"}
+    ],
+    "metrics": [
+        {
+            "statetimeseries":
+            {
+                "key":  "tcp_state",
+                "states":  ["OK", "ERROR"],
+                "dimensions": ["Target"],
+                "displayname":  "State"}
+        }
+    ]
 
 }
