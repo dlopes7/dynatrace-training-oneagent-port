@@ -1,6 +1,6 @@
 {
     "name": "custom.python.tcp_check",
-    "version": "1.001",
+    "version": "1.002",
     "type": "python",
     "entity": "HOST",
     "technologies": [],
@@ -14,6 +14,12 @@
     "properties": [
         {"key":  "targets", "type": "Textarea"}
     ],
+    "configUI": {
+        "displayName": "TCP Checks",
+        "properties": [
+            {"key":  "targets", "displayName": "Targets to test", "displayOrder": 1, "displayHint":  "List of host:port, separated by new lines"}
+        ]
+    },
     "metrics": [
         {
             "statetimeseries":
@@ -23,6 +29,35 @@
                 "dimensions": ["Target"],
                 "displayname":  "State"}
         }
-    ]
+    ],
+    "ui": {
+        "charts": [
+            {
+                "group": "TCP Checks",
+                "title": "TCP Checks Results",
+                "series": [
+                    {
+                        "key":  "tcp_state",
+                        "displayName":  "State",
+                        "statechart":  true,
+                        "statecolors":  ["#00ff00", "#B70000"]}
+                ]
+            }
+        ],
+        "keycharts": [
+            {
+                "group": "TCP Checks",
+                "title": "TCP Checks Results",
+                "series": [
+                    {
+                        "key":  "tcp_state",
+                        "displayName":  "State",
+                        "statechart":  true,
+                        "statecolors":  ["#00ff00", "#B70000"]
+                    }
+                ]
+            }
+        ]
+    }
 
 }
