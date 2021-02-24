@@ -1,0 +1,17 @@
+{
+    "name": "custom.python.tcp_check",
+    "version": "1.001",
+    "type": "python",
+    "entity": "HOST",
+    "technologies": [],
+    "metricGroup": "tech.TCPChecks",
+    "source": {
+        "package": "tcp_check_extension",
+        "className": "TCPCheckExtension",
+        "install_requires": [],
+        "activation": "Singleton"
+    },
+    "properties": [],
+    "metrics": []
+
+}
